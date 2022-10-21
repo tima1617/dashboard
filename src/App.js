@@ -58,7 +58,9 @@ export default function App() {
             type="password"
             placeholder="password"
           ></input>
-          <Link to="/home">Accueil</Link>
+          <Link classname="button" to="/home">
+            Accueil
+          </Link>
         </div>
         <div className="button-container">
           <button hidden={loading || currentUser} onClick={handleSignup}>
