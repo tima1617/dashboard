@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { signup, logout, login, useAuth } from "./firebase";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -42,14 +43,22 @@ export default function App() {
   return (
     <div id="main">
       <div className="container">
+        <h1 hidden={currentUser}>Se connecter</h1>
+        <h1 hidden={!currentUser}>Se déconnecter</h1>
         {/* <div>Actuellement connecté en tant que : {currentUser?.email} </div> */}
         <div className="informations">
-          <input ref={emailRef} placeholder="email"></input>
           <input
+            hidden={currentUser}
+            ref={emailRef}
+            placeholder="email"
+          ></input>
+          <input
+            hidden={currentUser}
             ref={passwordRef}
             type="password"
             placeholder="password"
           ></input>
+          <Link to="/home">Accueil</Link>
         </div>
         <div className="button-container">
           <button hidden={loading || currentUser} onClick={handleSignup}>

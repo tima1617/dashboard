@@ -1,91 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
-
 #main {
-  height: 100vh;
-}
-
-.container {
-  height: 100vh;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
-}
-
-.informations {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 input {
   margin: 8px;
-}
-button {
-  margin: 8px;
-}
-
-.login {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-  font-family: "Comfortaa", cursive;
-  border-radius: 50px;
-}
-
-.form {
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
+  background-color: white;
   border-radius: 10px;
-  max-width: 600px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: -11px 11px 22px #bebebe, 11px -11px 22px #ffffff;
+  padding: 5px 10px;
 }
 
-.form input {
-  outline: 0;
-  background: #e0e0e0;
-  width: 100%;
-  border: 0;
-  border-radius: 5px;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-family: "Comfortaa", cursive;
+button {
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: all 0.2s;
 }
 
-.form input:focus {
-  background: #e0e0e0;
+button:hover {
+  padding: 5px 20px;
 }
 
-.form button {
-  font-family: "Comfortaa", cursive;
-  text-transform: uppercase;
-  outline: 0;
-  background: #e0e0e0;
-  width: 100%;
-  border: 0;
-  border-radius: 5px;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+.container {
+  width: 30%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-width: 5px;
+  border: solid;
+  border-color: black;
+  border-radius: 15px;
 }
 
-.form button {
-  background: #747b89;
-}
-.form button:active {
-  background: #395591;
-}
-
-.form button:hover {
-  background: #54658b;
+h1 {
+  margin: 0;
 }
