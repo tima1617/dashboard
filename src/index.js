@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
+import Stats from "./components/Stats";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" element={<App />}></Route>
       <Route path="/home" element={<Home />}></Route>
       <Route path="/signup" element={<Signup />}></Route>
+      <Route path="/stats" element={<Stats />}></Route>
     </Routes>
   </BrowserRouter>
 );

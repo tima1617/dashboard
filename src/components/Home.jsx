@@ -46,6 +46,9 @@ function Home() {
     <div className="main">
       <div className="logout_container">
         <button onClick={handleLogout}>Se déconnecter</button>
+        <a href="/stats">
+          <button>Statistiques</button>
+        </a>
       </div>
       <MapContainer
         id="map"
