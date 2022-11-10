@@ -59,7 +59,7 @@ export default function App() {
             placeholder="Mot de passe"
           ></input>
           <Link classname="button" to="/home" hidden={!currentUser}>
-            Accueil
+            Ouvrir la Map
           </Link>
         </div>
         <div className="button-container">

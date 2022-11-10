@@ -10,6 +10,8 @@ import {
 import "leaflet/dist/leaflet.css";
 import Leaflet from "leaflet";
 import iconMarker from "../components/constants";
+import { useRef, useState } from "react";
+import { signup, logout, login, useAuth } from "../firebase";
 
 function Home() {
   const position = [47.203, -1.55];
@@ -27,8 +29,24 @@ function Home() {
     return null;
   }
 
+  const [loading, setLoading] = useState(false);
+
+  async function handleLogout() {
+    setLoading(true);
+    try {
+      await logout();
+    } catch {
+      alert("Logout error.");
+    }
+    window.location.href = "/";
+    setLoading(false);
+  }
+
   return (
     <div className="main">
+      <div className="logout_container">
+        <button onClick={handleLogout}>Se déconnecter</button>
+      </div>
       <MapContainer
         id="map"
         center={[47.203, -1.537]}
