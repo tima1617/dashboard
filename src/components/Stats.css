@@ -1,0 +1,19 @@
+.container_graphs {
+}
+.container_graph1 {
+  display: flex;
+  justify-content: space-around;
+}
+.container_graph2 {
+  display: flex;
+  justify-content: space-around;
+}
+.chart_container {
+  width: 45%;
+  height: 45%;
+}
+
+.chart_container2 {
+  width: 28%;
+  height: 28%;
+}
