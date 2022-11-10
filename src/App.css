@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+  background-color: black;
 }
 
 input {
@@ -33,10 +35,21 @@ button:hover {
   justify-content: space-around;
   border-width: 5px;
   border: solid;
-  border-color: black;
+  border-color: white;
   border-radius: 15px;
+  background-color: white;
 }
 
 h1 {
   margin: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container_infos p {
+  color: white;
 }

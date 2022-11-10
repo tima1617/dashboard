@@ -1,9 +1,9 @@
+import "./Signup.css";
 import { useRef, useState } from "react";
-import { signup, logout, login, useAuth } from "./firebase";
-import "./App.css";
+import { signup, logout, login, useAuth } from "../firebase";
 import { Link } from "react-router-dom";
 
-export default function App() {
+function Signup() {
   const [loading, setLoading] = useState(false);
   const currentUser = useAuth();
 
@@ -43,33 +43,31 @@ export default function App() {
   return (
     <div id="main">
       <div className="container">
-        <h1 hidden={currentUser}>Se connecter</h1>
-        <h1 hidden={!currentUser}>Vous êtes connectés</h1>
+        <h1 hidden={currentUser}>S'inscrire</h1>
         {/* <div>Actuellement connecté en tant que : {currentUser?.email} </div> */}
         <div className="informations">
           <input
             hidden={currentUser}
             ref={emailRef}
-            placeholder="Email"
+            placeholder="email"
           ></input>
           <input
             hidden={currentUser}
             ref={passwordRef}
             type="password"
-            placeholder="Mot de passe"
+            placeholder="password"
           ></input>
           <Link classname="button" to="/home" hidden={!currentUser}>
             Accueil
           </Link>
         </div>
         <div className="button-container">
-          <button hidden={loading || currentUser} onClick={handleLogin}>
-            Se connecter
-          </button>
-
           <a href="/signup">
             {/* <button hidden={loading || currentUser} onClick={handleSignup}> */}
             <button hidden={loading || currentUser}>S'inscrire</button>
+          </a>
+          <a href="/">
+            <button hidden={loading || currentUser}>Se connecter</button>
           </a>
 
           <button hidden={loading || !currentUser} onClick={handleLogout}>
@@ -77,10 +75,8 @@ export default function App() {
           </button>
         </div>
       </div>
-      <div class="container_infos" hidden={loading || currentUser}>
-        <p>Email : aaaa@aaaa.aa</p>
-        <p>Mot de passe : aaaaaa</p>
-      </div>
     </div>
   );
 }
+
+export default Signup;
